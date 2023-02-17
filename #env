@@ -1,0 +1,15 @@
+# backend URL
+REACT_APP_BASE_URL= https://backend.de3verse.com/api
+# REACT_APP_BASE_URL= http://localhost:3000/api
+# network ID
+REACT_APP_NETWORK_ID = mainnet
+# contract name
+REACT_APP_CONTRACT_NAME = de3verse_deploy.near
+# nodeUrl
+REACT_APP_NODE_URL = https://rpc.mainnet.near.org
+# walletUrl
+REACT_APP_WALLET_URL = https://wallet.mainnet.near.org
+# helperUrl
+REACT_APP_HELPER_URL = https://helper.mainnet.near.org
+# explorerUrl
+REACT_APP_EXPLORER_URL = https://explorer.mainnet.near.org

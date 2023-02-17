@@ -1,0 +1,219 @@
+.nav-wrapper {
+  height: 100px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 100;
+}
+
+.nav-wrapper .menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.nav-wrapper .menu ul li {
+  padding: 0 10px;
+}
+.nav-wrapper .menu ul li a {
+  text-decoration: none;
+}
+.nav-wrapper .btn {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 10px 20px;
+}
+.nav-wrapper .btn a {
+  text-decoration: none;
+  background: linear-gradient(270deg, #9747ff 2.21%, #000000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+}
+nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-wrapper .menu {
+    display: none;
+  }
+  .nav-wrapper .btn {
+    display: none;
+  }
+  nav {
+    display: block;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 20px;
+  }
+
+  .Hamburger {
+    margin-top: -10px;
+  }
+
+  /* .Cart {
+    padding-top: 5px;
+    padding-right: 10px;
+  } */
+
+  .cart {
+    position: absolute;
+  }
+
+  .number-box {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  #menuToggle {
+    width: 10vw;
+    display: block;
+    position: relative;
+    /* top: 30px; */
+    left: 10px;
+
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a p {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    margin-left: 40px;
+  }
+
+  #menuToggle a:hover {
+    color: #7b3c93;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+  }
+
+  /*
+   * Just a quick hamburger
+   */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #ffffff;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /* 
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  /*
+   * But let's hide the middle one.
+   */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+   * Ohyeah and the last one should go the other direction
+   */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+  #menu {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin: -100px 0 0px -80px;
+    padding: 50px;
+    padding-top: 125px;
+
+    background: rgba(239, 230, 255, 0.5);
+    backdrop-filter: blur(15px);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 100% 0%;
+    transform: translate(-400%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  /*
+   * And let's slide it in from the left
+   */
+
+  #menuToggle input:checked ~ ul {
+    transform: translate(-300px, 0);
+  }
+  #menu p {
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    color: #232323;
+  }
+}

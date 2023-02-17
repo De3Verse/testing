@@ -1,0 +1,19 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.footer-text {
+  display: flex;
+  justify-content: space-around;
+}
+.footer-legal {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  bottom: 10px;
+}
+.footer-legal p {
+  margin-bottom: -8px;
+}
